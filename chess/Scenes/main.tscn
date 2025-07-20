@@ -1,0 +1,176 @@
+[gd_scene load_steps=24 format=3 uid="uid://c5ev3grrw2u6m"]
+
+[ext_resource type="PackedScene" uid="uid://dio08bxqmd8af" path="res://Scenes/board.tscn" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://bm8g4j10ivl0x" path="res://assets/white_knight.png" id="1_ynf5e"]
+[ext_resource type="Texture2D" uid="uid://dckggffn1xlgl" path="res://assets/white_bishop.png" id="2_hptm8"]
+[ext_resource type="Texture2D" uid="uid://dejb1ur3hi6vf" path="res://assets/white_rook.png" id="3_d1ilt"]
+[ext_resource type="Texture2D" uid="uid://kd17a251xqin" path="res://assets/white_queen.png" id="4_6iyac"]
+[ext_resource type="Texture2D" uid="uid://dkjrnlh6s03yx" path="res://assets/black_knight.png" id="5_fdnlq"]
+[ext_resource type="Texture2D" uid="uid://dv12p3l06jgun" path="res://assets/black_bishop.png" id="6_jkdf5"]
+[ext_resource type="Texture2D" uid="uid://c645xn3a0lrq" path="res://assets/black_rook.png" id="7_wsu2k"]
+[ext_resource type="Texture2D" uid="uid://b7alnohor6hkl" path="res://assets/black_queen.png" id="8_k12tt"]
+[ext_resource type="Texture2D" uid="uid://dp42wk3ckc7cp" path="res://assets/restart.png" id="9_hptm8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h1bgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3802"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fevyy"]
+texture = ExtResource("1_ynf5e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hibaj"]
+texture = ExtResource("2_hptm8")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pdsj5"]
+texture = ExtResource("3_d1ilt")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ee4r6"]
+texture = ExtResource("4_6iyac")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gt3je"]
+texture = ExtResource("5_fdnlq")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3pmx8"]
+texture = ExtResource("6_jkdf5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u50mg"]
+texture = ExtResource("7_wsu2k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cbgmd"]
+texture = ExtResource("8_k12tt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d1ilt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6iyac"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fdnlq"]
+texture = ExtResource("9_hptm8")
+
+[node name="Main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(72, -72)
+zoom = Vector2(4, 4)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="white_pieces" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="2" type="Button" parent="CanvasLayer/white_pieces" groups=["white_pieces"]]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fevyy")
+
+[node name="3" type="Button" parent="CanvasLayer/white_pieces" groups=["white_pieces"]]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hibaj")
+
+[node name="4" type="Button" parent="CanvasLayer/white_pieces" groups=["white_pieces"]]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pdsj5")
+
+[node name="5" type="Button" parent="CanvasLayer/white_pieces" groups=["white_pieces"]]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 400.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ee4r6")
+
+[node name="black_pieces" type="Control" parent="CanvasLayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="2" type="Button" parent="CanvasLayer/black_pieces" groups=["black_pieces"]]
+layout_mode = 0
+offset_right = 100.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gt3je")
+
+[node name="3" type="Button" parent="CanvasLayer/black_pieces" groups=["black_pieces"]]
+layout_mode = 0
+offset_left = 100.0
+offset_right = 200.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3pmx8")
+
+[node name="4" type="Button" parent="CanvasLayer/black_pieces" groups=["black_pieces"]]
+layout_mode = 0
+offset_left = 200.0
+offset_right = 300.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_u50mg")
+
+[node name="5" type="Button" parent="CanvasLayer/black_pieces" groups=["black_pieces"]]
+layout_mode = 0
+offset_left = 300.0
+offset_right = 400.0
+offset_bottom = 100.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h1bgf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_b3802")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cbgmd")
+
+[node name="Restart" type="Button" parent="CanvasLayer"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = 56.0
+offset_right = -74.0
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_d1ilt")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6iyac")
+theme_override_styles/normal = SubResource("StyleBoxTexture_fdnlq")
+
+[node name="Board" parent="." instance=ExtResource("1_jjgbg")]
+position = Vector2(72, -72)
